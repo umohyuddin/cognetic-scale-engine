@@ -8,19 +8,26 @@ const industries = [
 export function Hero() {
   return (
     <section id="top" className="relative pt-32 pb-24 overflow-hidden">
-      {/* Background layers */}
-      <div className="absolute inset-0 particle-grid pointer-events-none" />
-
-      {/* Dramatic radial glow behind headline */}
+      {/* Soft radial glow behind headline */}
       <div
-        className="absolute left-1/2 top-[18%] -translate-x-1/2 -translate-y-1/2 h-[720px] w-[1100px] rounded-full pointer-events-none blur-2xl animate-pulse-glow"
+        className="absolute left-1/2 top-[22%] -translate-x-1/2 -translate-y-1/2 h-[640px] w-[1000px] rounded-full pointer-events-none blur-3xl opacity-70"
         style={{ background: "var(--gradient-hero)" }}
       />
-      {/* Secondary cyan halo */}
-      <div
-        className="absolute left-1/2 top-[14%] -translate-x-1/2 h-[420px] w-[700px] rounded-full pointer-events-none blur-3xl opacity-60"
-        style={{ background: "radial-gradient(circle, oklch(0.72 0.16 210 / 0.45), transparent 65%)" }}
-      />
+
+      {/* Antigravity-style liftoff rainbow streaks */}
+      <div className="liftoff-streaks" aria-hidden="true">
+        <span className="liftoff-streak thin" style={{ left: "8%",  animationDelay: "0s",   animationDuration: "8s" }} />
+        <span className="liftoff-streak"      style={{ left: "16%", animationDelay: "2.3s", animationDuration: "7s" }} />
+        <span className="liftoff-streak wide" style={{ left: "27%", animationDelay: "4.1s", animationDuration: "9s" }} />
+        <span className="liftoff-streak thin" style={{ left: "38%", animationDelay: "1.2s", animationDuration: "8.5s" }} />
+        <span className="liftoff-streak"      style={{ left: "49%", animationDelay: "3.5s", animationDuration: "7.5s" }} />
+        <span className="liftoff-streak thin" style={{ left: "58%", animationDelay: "5.2s", animationDuration: "9s" }} />
+        <span className="liftoff-streak wide" style={{ left: "68%", animationDelay: "0.8s", animationDuration: "8s" }} />
+        <span className="liftoff-streak"      style={{ left: "78%", animationDelay: "2.9s", animationDuration: "7.2s" }} />
+        <span className="liftoff-streak thin" style={{ left: "88%", animationDelay: "4.6s", animationDuration: "8.8s" }} />
+        <span className="liftoff-streak"      style={{ left: "94%", animationDelay: "6s",   animationDuration: "7.6s" }} />
+      </div>
+
 
 
       <div className="relative mx-auto max-w-7xl px-6 text-center">
