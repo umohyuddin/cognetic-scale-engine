@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "deploy": "vite deploy",
+    "deploy": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
