@@ -1,32 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/site/Navbar";
-import { Hero } from "@/components/site/Hero";
-import { Services } from "@/components/site/Services";
-import { HowItWorks } from "@/components/site/HowItWorks";
-import { Comparison } from "@/components/site/Comparison";
-import { Engagement } from "@/components/site/Engagement";
-import { Industries } from "@/components/site/Industries";
-import { TechStack } from "@/components/site/TechStack";
-import { Stats } from "@/components/site/Stats";
-import { Contact } from "@/components/site/Contact";
-import { Footer } from "@/components/site/Footer";
+import { Navbar } from "@/components/hn/Navbar";
+import { Hero } from "@/components/hn/Hero";
+import { SignatureDishes } from "@/components/hn/SignatureDishes";
+import { Story } from "@/components/hn/Story";
+import { Menu } from "@/components/hn/Menu";
+import { WhyUs } from "@/components/hn/WhyUs";
+import { Locations } from "@/components/hn/Locations";
+import { Reviews } from "@/components/hn/Reviews";
+import { Reservation } from "@/components/hn/Reservation";
+import { Footer } from "@/components/hn/Footer";
+import { WhatsAppFloat } from "@/components/hn/WhatsAppFloat";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CogneticAI — Scale Your Engineering. Without the Overhead." },
+      { title: "HN Foods — Premium Pakistani Fusion Cuisine | Ranjha Gosht & Heer Gosht" },
       {
         name: "description",
         content:
-          "CogneticAI delivers managed developers, AI automation, and full-stack software delivery for startups and enterprises worldwide.",
+          "HN Foods — Premium Pakistani Fusion Cuisine. Home of the legendary Ranjha Gosht & Heer Gosht. Serving Multan, Lahore, Islamabad & Karachi.",
       },
-      { property: "og:title", content: "CogneticAI — Engineering, Delivered." },
+      { property: "og:title", content: "HN Foods — Where Every Bite Tells a Love Story" },
       {
         property: "og:description",
         content:
-          "Managed developers, AI automation, and full-stack software delivery. Zero overhead. Pure execution.",
+          "Taste the legendary Ranjha Gosht & Heer Gosht — slow-cooked recipes born from the heart of Punjab.",
       },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "restaurant" },
     ],
   }),
   component: Index,
@@ -34,20 +34,20 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <HowItWorks />
-        <Comparison />
-        <Engagement />
-        <Industries />
-        <TechStack />
-        <Stats />
-        <Contact />
+        <SignatureDishes />
+        <Story />
+        <Menu />
+        <WhyUs />
+        <Locations />
+        <Reviews />
+        <Reservation />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
