@@ -9,11 +9,19 @@ export function Hero() {
   return (
     <section id="top" className="relative pt-32 pb-24 overflow-hidden">
       {/* Background layers */}
-      <div className="absolute inset-0 grid-bg pointer-events-none" />
+      <div className="absolute inset-0 particle-grid pointer-events-none" />
+
+      {/* Dramatic radial glow behind headline */}
       <div
-        className="absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[900px] rounded-full pointer-events-none animate-pulse-glow"
+        className="absolute left-1/2 top-[18%] -translate-x-1/2 -translate-y-1/2 h-[720px] w-[1100px] rounded-full pointer-events-none blur-2xl animate-pulse-glow"
         style={{ background: "var(--gradient-hero)" }}
       />
+      {/* Secondary cyan halo */}
+      <div
+        className="absolute left-1/2 top-[14%] -translate-x-1/2 h-[420px] w-[700px] rounded-full pointer-events-none blur-3xl opacity-60"
+        style={{ background: "radial-gradient(circle, oklch(0.72 0.16 210 / 0.45), transparent 65%)" }}
+      />
+
 
       <div className="relative mx-auto max-w-7xl px-6 text-center">
         <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground mb-8 animate-fade-up">
